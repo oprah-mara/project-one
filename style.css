@@ -9,3 +9,74 @@
     --dark-colors: #2A326F;
     --light-colors: #8695A4;
 }
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: var(--Poppins);
+}
+img{
+    max-width: 100%;
+    display: block;
+}
+ul,ol{
+    list-style-type: none;
+}
+header{
+    position: relative;
+    overflow-x: clip;
+}
+.container{
+    width: 98%;
+    max-width: 68.75rem;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid red;
+    width: 100%;
+    height: 14dvh;
+}
+.nav-ul-container{
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    font-size: 1.2rem;
+    border: 2px solid red;
+    height: 78dvh;
+    width: 60%;
+    background-color: var(--light-colors);
+    transition: all ease-in-out 250ms;
+
+}
+.nav_links_container-helper{
+    right: 0 !important;
+
+}
+#hanburger-icon{
+    cursor: pointer;
+}
+
+@media(width >= 768px){
+    #hanburger-icon{
+       display:none; 
+    }
+    .nav-ul-container{
+        position: static;
+        width: fit-content;
+        height: auto;
+        flex-direction: row;
+        justify-content: right;
+        background-color: var(--primary-colors); 
+    }
+}
