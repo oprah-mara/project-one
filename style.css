@@ -26,12 +26,21 @@ ul,ol{
     list-style-type: none;
 }
 header{
-    position: relative;
+    position: sticky;
     overflow-x: clip;
+    top: 0;
+    background-color: var(--primary-colors);
 }
 .container{
     width: 98%;
     max-width: 68.75rem;
+    margin-inline: auto;
+
+}
+.container-medium{
+    width: 98%;
+    max-width: 56.25rem;
+    margin-inline: auto;
 }
 
 nav{
@@ -52,7 +61,6 @@ nav{
     align-items: center;
     gap: 1em;
     font-size: 1.2rem;
-    border: 2px solid red;
     height: 78dvh;
     width: 60%;
     background-color: var(--light-colors);
@@ -67,16 +75,17 @@ nav{
 }
 /* this is sub-container stylings */
 .sub-container{
-    
     display: flex;
-    gap: 1em;
+    gap: 2.5rem;
     flex-direction: column;
+    margin-block: 2rem;
+   
 }
 .sub-container_content{
     display: flex;
     flex-direction: column;
     align-items: start;
-    gap: 1em;
+    gap: 1.5rem;
 
 }
 h1{
@@ -109,6 +118,8 @@ h1{
 
 
 
+
+
 @media(width >= 768px){
     #hanburger-icon{
        display:none; 
@@ -120,6 +131,12 @@ h1{
         flex-direction: row;
         justify-content: right;
         background-color: var(--primary-colors); 
+    }
+    .sub-container{
+        flex-direction: row;
+        gap: 3rem;
+        
+
     }
 
 }
