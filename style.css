@@ -112,8 +112,6 @@ h1{
 .section-one{
    background-color: var(--secondary-colors);
    width: 100%;
-  
-
    
 }
 
@@ -123,7 +121,7 @@ h1{
     justify-content: space-between;
     padding-block: 1.5rem;
 }
-.sec_ul li:first-child{
+.sec_ul p{
     font-size: clamp(0.8rem, 0.375rem + 2vw, 1.2rem);
 }
 .sec_ul a{
@@ -139,26 +137,93 @@ h1{
 
 .sec_ul-1{
     max-width: 27.375rem;
-    background-color: #FFFFFF;
+    background-color: #FFFFFF; 
     padding: 1.5rem;
     margin-block: 1.2rem;
     border-radius: 0.5rem;
     
 
 }
-.sec_ul-1 li:first-child{
+h3{
     font-size: clamp(1.25rem, 0.625rem + 2vw, 1.75rem);
     font-weight: 600;
 }
-.sec_ul-1 li:nth-child(2){
-    font-size: clamp(0.7rem, 0.325rem + 1.2vw, .8rem);
+.sec_ul-1 p:first-child{
+    font-size: clamp(0.4rem, 0.325rem + 1.2vw, .6rem);
     color: #636B78;
 }
-.sec_ul-1 li:last-child{
+.sec_ul-1 p:last-child{
     font-size: clamp(0.9rem, 0.4625rem + 1.4vw, 1rem);
     padding-block: 1rem;
+    /* border: 2px solid red; */
+}
+.section-two{
+    width: 100%;
+}
+.section-header{
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    padding-block: 1.5rem;
+}
+.section-header > p{
+    font-size: clamp(0.8rem, 0.375rem + 2vw, 1.2rem);
+}
+.section-header > a{
+    font-size: clamp(0.875rem, 0.5625rem + 1vw, 1.125rem);
+    color: var(--secondary-light-colors);
+    text-decoration: none;
+}
+.section_featured-work{
+    margin-inline: 1rem;
+    border: 2px solid red;
+}
+.featured-work{
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem ;
+    margin-block: 2rem;
+    border-bottom: 1px solid var(--light-colors);
+    padding-bottom: 3rem;
+
+
+}
+.feature-column{
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+}
+.feature-column p{
+    border: 1px solid red;
+}
+
+.feature-column p:first-child{
+    font-size: clamp(0.8rem, 0.375rem + 2vw, 1.2rem);
+    font-weight: 600;
     
 }
+.dashboard-year{
+    background-color: var(--dark-colors);
+    color: var(--primary-colors);
+    border-radius: 4px;
+    font-size: clamp(0.7rem, 0.325rem + 1.2vw, .6rem);
+    padding: .2rem .7rem;
+
+}
+.dashboard-text{
+    margin-inline: 2rem;
+    font-size: clamp(0.8rem, 0.325rem + 1.2vw, .8rem);
+    color: #636B78;
+    
+}
+
+
+.feature-column p:last-child{
+    font-size: clamp(0.9rem, 0.4625rem + 1.4vw, 1rem);
+    padding-block: 1rem;
+}
+
 
 
 
@@ -192,8 +257,9 @@ h1{
         flex-direction: row;
         justify-content: space-between;
     }
-    .sec_ul-1{
-      
+    .featured-work{
+        
+        flex-direction: row;
     }
-
+    
 }
