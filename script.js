@@ -6,3 +6,7 @@ function handleRevealNav(){
     
 }
 hanburger.addEventListener("click", handleRevealNav);
+
+// document.getElementById('click-blog').addEventListener('click', function() {
+//     document.getElementById('click-me_B').scrollIntoView({ behavior: 'smooth' });
+// });

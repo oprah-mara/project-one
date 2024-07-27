@@ -1,4 +1,5 @@
-:root{
+
+    :root{
     /* font-family */
     --poppins: "Poppins", sans-serif;
 
@@ -32,12 +33,17 @@ ul,ol{
 a{
     text-decoration: none;
     color: black;
-    transition: all 250ms ease-in-out;
+}
+.nav-ul-container a:hover{
+    color: var(--accent-colors);
 }
 li{
     transition: all 250ms ease-in-out;
 }
+.nav-ul-container li:nth-child(3) a{
+    color: var(--accent-colors);
 
+}
 header{
     position: sticky;
     overflow-x: clip;
@@ -77,105 +83,16 @@ nav{
     height: 78dvh;
     width: 60%;
     background-color: pink;
-    transition: all ease-in-out 150ms;
+    transition: all ease-in-out 250ms;
     cursor: pointer;
-}
-.nav-ul-container li a:hover, .nav-ul-container li:last-child:hover{
-    color: var(--accent-colors);
-}
 
+}
 .nav_links_container-helper{
     right: 0 !important;
 }
 #hanburger-icon{
     cursor: pointer;
 }
-
-/* this is sub-container stylings */
-.sub-container{
-    display: flex;
-    gap: 2.5rem;
-    flex-direction: column;
-    margin-block: 2rem;
-   
-}
-.sub-container_content{
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    gap: 1.5rem;
-}
-h1{
-    font-size: clamp(1.4rem, 1.13rem + 1.728vw,2.75rem);
-    font-weight: 700;
-}
-.sub-container_content > p{
-    font-size: clamp(1rem, 0.975rem + 0.15rem, 1.12rem);
-    color: black;
-
-}
-.sub-container_button{
-    font-size: clamp(1rem, 0.975rem + 0.15rem, 1.12rem);
-    background-color: var(--accent-colors);
-    color: var(--primary-colors);
-    border-radius: 0.25rem;
-    border: none;
-    padding: .7em 1em;
-    cursor: pointer;
-}
-.sub-container > img{
-    align-self: center;
-}
-.section-one{
-   background-color: var(--secondary-colors);
-   width: 100%;
-   padding-block: 1rem;
-   
-}
-
-.sec_ul{
-    font-weight: 600;
-    display: flex;
-    justify-content: space-between;
-    padding-block: 1.5rem;
-}
-.sec_ul p{
-    font-size: clamp(0.8rem, 0.375rem + 2vw, 1.2rem);
-}
-.sec_ul a{
-    font-size: clamp(0.875rem, 0.5625rem + 1vw, 1.125rem);
-    color: var(--secondary-light-colors);
-    text-decoration: none;
-}
-.section-main{
-    display: flex;
-     flex-direction: column;
-     align-items: center;
-}
-
-.sec_ul-1{
-    max-width: 27.375rem;
-    background-color: #FFFFFF; 
-    padding: 1.5rem;
-    margin-block: 1.2rem;
-    border-radius: 0.5rem;
-}
-h3{
-    font-size: clamp(1.25rem, 0.625rem + 2vw, 1.75rem);
-    font-weight: 600;
-    color: var(--dark-colors);
-}
-.sec_ul-1 p:first-of-type{
-    font-size: clamp(0.8rem, 0.325rem + 1.2vw, .9rem);
-    color: #636B78;
-    color: var(--light-colors);
-}
-.sec_ul-1 p:last-child{
-    font-size: clamp(0.9rem, 0.4625rem + 1.4vw, 1rem);
-    padding-block: 1rem;
-}
-
-/* this is section two */
 .section-two{
     width: 100%;
 }
@@ -224,8 +141,7 @@ h3{
 .dashboard-text{
     margin-inline: 2rem;
     font-size: clamp(0.8rem, 0.325rem + 1.2vw, .8rem);
-    color: var(--light-colors);
-    
+    color: var(--light-colors);  
 }
 
 
@@ -233,34 +149,30 @@ h3{
     font-size: clamp(0.9rem, 0.4625rem + 1.4vw, 1rem);
     padding-block: 1rem;
 }
-
-/* this is footer */
 .footer-container{
-   padding: 2rem;
-}
-.footer-logos{
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
+    padding: 2rem;
+ }
+ .footer-logos{
+     display: flex;
+     gap: 2rem;
+     justify-content: center;
+ }
+ .footer-container p{
+     text-align: center;
+     padding-top: 1rem;
+     font-size: 0.875rem;
+     color: var(--light-colors);
+ }
 
-
-}
-.footer-container p{
-    text-align: center;
-    padding-top: 1rem;
-    font-size: 0.875rem;
-    color: var(--light-colors);
-}
-
-
-
-
-
-@media(width >= 768px){
-    #hanburger-icon{
-       display:none; 
+@media(width >=768px){
+    .featured-work{
+        
+        flex-direction: row;
     }
-    .nav-ul-container{
+    #hanburger-icon{
+        display:none; 
+     }
+     .nav-ul-container{
         position: static;
         width: fit-content;
         height: auto;
@@ -268,19 +180,4 @@ h3{
         justify-content: right;
         background-color: var(--primary-colors); 
     }
-    .sub-container{
-        flex-direction: row;
-        gap: 3rem;
-        
-
-    }
-    .section-main{
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    .featured-work{
-        
-        flex-direction: row;
-    }
-    
 }
